@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Weather from openweathermap.org</title>
+        <link rel="stylesheet" type="text/css" href="css/weather.css">
+    </head>
+
+    <body>
+        <div ng-app="weatherApp" ng-controller="weatherController">
+            <h1>Current weather</h1>
+            <p>
+                City name: <input type="text" ng-model="cityName" />
+                <button ng-click="showWeather()">Show weather</button>
+            </p>
+
+            <weather name="currentWeather"></weather>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+        <script type="text/javascript" src="js/weatherApp.js"></script>
+        <script type="text/javascript" src="js/weatherDirective.js"></script>
+        <script type="text/javascript" src="js/weatherService.js"></script>
+        <script type="text/javascript" src="js/weatherController.js"></script>
+    </body>
+</html>
